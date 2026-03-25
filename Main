@@ -1,0 +1,40 @@
+package br.com.fiap;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        DespesaFamiliar df = new DespesaFamiliar();
+
+        System.out.print("Digite a renda familiar: ");
+        df.rendaFamiliar = sc.nextDouble();
+
+        System.out.print("Digite o número de moradores: ");
+        df.numeroDeMoradores = sc.nextInt();
+
+        System.out.print("Digite o gasto com luz: ");
+        df.gastoComLuz = sc.nextDouble();
+
+        System.out.print("Digite o gasto com água: ");
+        df.gastoComAgua = sc.nextDouble();
+
+        System.out.print("Digite o gasto com internet: ");
+        df.gastoComInternet = sc.nextDouble();
+
+        System.out.print("Digite o valor da academia: ");
+        df.valorMensalidadeDaAcademia = sc.nextDouble();
+
+        double totalDespesas = df.calcularTotalDeDespesas();
+        double rendaLiquida = df.calcularRendaFamiliarLiquida();
+
+        System.out.printf("\nRenda Familiar: %.3f", df.rendaFamiliar);
+        System.out.printf("\nTotal de Despesas: %.3f", totalDespesas);
+        System.out.printf("\nRenda Líquida: %.3f", rendaLiquida);
+
+        sc.close();
+    }
+}
