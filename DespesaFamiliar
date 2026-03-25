@@ -1,0 +1,20 @@
+package br.com.fiap;
+
+public class DespesaFamiliar {
+
+    public double rendaFamiliar;
+    public int numeroDeMoradores;
+    public double gastoComLuz;
+    public double gastoComAgua;
+    public double gastoComInternet;
+    public double valorMensalidadeDaAcademia;
+
+    public double calcularTotalDeDespesas() {
+        double academiaTotal = numeroDeMoradores * valorMensalidadeDaAcademia;
+        return gastoComLuz + gastoComAgua + gastoComInternet + academiaTotal;
+    }
+
+    public double calcularRendaFamiliarLiquida() {
+        return rendaFamiliar - calcularTotalDeDespesas();
+    }
+}
